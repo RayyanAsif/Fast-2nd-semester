@@ -13,7 +13,7 @@ class Ghost{
 		virtual void haunt() = 0;
 		virtual Ghost* operator+(const Ghost& x) = 0;
 		friend ostream& operator<<(ostream& o,const Ghost& x){
-			o<<x.workerName<<" | Scare Level : "<<x.scarelevel<<endl;
+			o<<x.workerName<<" | Scare Level : "<<x.scarelevel;
 			return o;
 		}	
 };
@@ -113,14 +113,14 @@ void visit(HauntedHouse& h,string n,int b){
     }
 }
 int main() {
-    HauntedHouse h1("Spooky Mansion");
-    h1.addGhost(new Poltergeists("John"));
-    h1.addGhost(new Banshees("Anna"));
-    h1.addGhost(new ShadowGhosts("Luke"));
+    HauntedHouse h1("Bhoot Bangla");
+    h1.addGhost(new Poltergeists("Akbar"));
+    h1.addGhost(new Banshees("Nani"));
+    h1.addGhost(new ShadowGhosts("Saad"));
     h1.show();
-    visit(h1,"Alice",5);
-    visit(h1,"Bob",9);
-    visit(h1,"Charlie",2);
+    visit(h1,"Rayyan",5);
+    visit(h1,"Abdullah",9);
+    visit(h1,"Umer",2);
     return 0;
 }
 
